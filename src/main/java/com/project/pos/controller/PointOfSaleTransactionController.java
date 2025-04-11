@@ -40,9 +40,15 @@ public class PointOfSaleTransactionController {
                 pointOfSaleTransactionService.saveTransactionInTransactionHistory(posTransaction, response, company);
                 return new ResponseEntity<>(BaseResponse
                         .builder()
-                        .status("SUCCESS")
-                        .message("Operation performed successfully")
+                        .status(response.getStatus())
+                        .message(response.getMessage())
                         .build(), HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(BaseResponse
+                        .builder()
+                        .status(response.getStatus())
+                        .message(response.getMessage())
+                        .build(), HttpStatus.NOT_ACCEPTABLE);
             }
         } catch (Exception ex){
             logger.error("CG LOG --> " + ex.getMessage());
@@ -52,6 +58,5 @@ public class PointOfSaleTransactionController {
                     .message("UNEXPECTED ERROR")
                     .build(), HttpStatus.FORBIDDEN);
         }
-        return null;
     }
 }
