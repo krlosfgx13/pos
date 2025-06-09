@@ -65,14 +65,14 @@ references company(company_id)
 -- from company c 
 -- join company_category cc on c.company_category_id = cc.company_category_id;
 
-select * from point_of_sale_transaction;
+-- select * from point_of_sale_transaction;
 
-select * from point_of_sale;
-select * from company where company_id = 82;
+-- select * from point_of_sale;
+-- select * from company where company_id = 82;
 
-select * from company_category where company_category_id = 26;
+-- select * from company_category where company_category_id = 26;
 
-select * from point_of_sale_transaction;
+-- select * from point_of_sale_transaction;
 
 
 

@@ -1,0 +1,31 @@
+services: 
+    java-app:
+        container_name: pos
+        restart: always
+        image: pos
+        networks:
+          - my-network        
+        ports: 
+            - "8081:8081"
+        depends_on:
+            - postgresdb 
+
+    postgresdb:
+        container_name: pos-db-pg
+        image: postgres
+        networks:
+          - my-network
+        environment:
+          POSTGRES_DB: 'posdb'
+          POSTGRES_USER: 'dbuser'
+          POSTGRES_PASSWORD: 'dbuser'
+        ports:      
+          - '5432:5432'
+        volumes: 
+          - pgdata:/var/lib/postgresql/data
+
+networks:
+  my-network:
+
+volumes:
+  pgdata: 
