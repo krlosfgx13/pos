@@ -172,12 +172,12 @@ INSERT INTO company (company_name, company_category_id) VALUES ('Pepsi', 25);
 INSERT INTO company (company_name, company_category_id) VALUES ('Nestlé', 25);
 INSERT INTO company (company_name, company_category_id) VALUES ('Starbucks', 25);
 
--- Food & Beverage (ID: 30)
-INSERT INTO company (company_name, company_category_id) VALUES ('ExxonMobil', 30);
-INSERT INTO company (company_name, company_category_id) VALUES ('Shell', 30);
-INSERT INTO company (company_name, company_category_id) VALUES ('BP', 30);
-INSERT INTO company (company_name, company_category_id) VALUES ('Chevron', 30);
-INSERT INTO company (company_name, company_category_id) VALUES ('TotalEnergies', 30);
+-- Energy (ID: 26)
+INSERT INTO company (company_name, company_category_id) VALUES ('ExxonMobil', 26);
+INSERT INTO company (company_name, company_category_id) VALUES ('Shell', 26);
+INSERT INTO company (company_name, company_category_id) VALUES ('BP', 26);
+INSERT INTO company (company_name, company_category_id) VALUES ('Chevron', 26);
+INSERT INTO company (company_name, company_category_id) VALUES ('TotalEnergies', 26);
 
 --insert data in POS
 insert into point_of_sale(point_of_sale_name, company_id)
